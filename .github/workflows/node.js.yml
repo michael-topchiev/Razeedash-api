@@ -26,9 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npx audit-ci --config ./audit-ci.json
     - run: npm ci
-    - run: npm run lint
     - run: npm run test
     - run: npm run test:apollo:default
     - run: npm run test:apollo:local
